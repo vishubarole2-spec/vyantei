@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyantei - Modern Fashion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            background-color: #FFF;
+            line-height: 1.6;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #FFF;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #D2B48C; /* Beige */
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x1080/000000/FFFFFF?text=Vyantei+Hero+Image') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #FFF;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .collections {
+            background-color: #F5F5DC; /* Beige */
+            text-align: center;
+        }
+
+        .collections h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #000;
+        }
+
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .collection-item {
+            background-color: #FFF;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .collection-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .collection-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .collection-item h3 {
+            font-family: 'Playfair Display', serif;
+            margin-top: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about {
+            background-color: #FFF;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .contact {
+            background-color: #000;
+            color: #FFF;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact p {
+            margin-bottom: 2rem;
+        }
+
+        .contact a {
+            color: #D2B48C; /* Beige */
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #000;
+            color: #FFF;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin-left: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .collections h2, .about h2, .contact h2 {
+                font-size: 2rem;
+            }
+
+            .collection-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Vyantei</div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div>
+            <h1>Vyantei</h1>
+            <p>Elegant fashion for the modern soul. Discover timeless pieces crafted with sophistication and style.</p>
+        </div>
+    </section>
+
+    <section id="collections" class="collections">
+        <h2>Collections</h2>
+        <div class="collection-grid">
+            <div class="collection-item">
+                <img src="https://via.placeholder.com/300x200/FFFFFF/000000?text=Collection+1" alt="Collection 1">
+                <h3>Summer Elegance</h3>
+                <p>Light and airy pieces perfect for the season.</p>
+            </div>
+            <div class="collection-item">
+                <img src="https://via.placeholder.com/300x200/FFFFFF/000000?text=Collection+2" alt="Collection 2">
+                <h3>Winter Chic</h3>
+                <p>Cozy yet stylish outfits for colder days.</p>
+            </div>
+            <div class="collection-item">
+                <img src="https://via.placeholder.com/300x200/FFFFFF/000000?text=Collection+3" alt="Collection 3">
+                <h3>Evening Glamour</h3>
+                <p>Sophisticated dresses for special occasions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Vyantei</h2>
+        <p>Vyantei is a modern fashion brand dedicated to creating high-quality, timeless clothing that blends elegance with contemporary design. Our pieces are crafted from premium materials, ensuring comfort and durability. Inspired by the fusion of tradition and innovation, Vyantei aims to empower individuals to express their unique style with confidence.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch or follow us for the latest updates.</p>
+        <a href="https://www.instagram.com/vyantei" target="_blank">Follow us on Instagram</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Vyantei. All rights reserved.</p>
+    </footer>
+</body>
+</html>
